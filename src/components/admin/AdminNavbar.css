@@ -1,0 +1,15 @@
+/* Align toggle properly */
+.burger-toggle {
+  transition: margin-left 0.3s ease;
+}
+
+.burger-toggle.collapsed {
+  margin-left: 70px; /* match collapsed sidebar width */
+}
+
+/* Optional: responsive support */
+@media (max-width: 768px) {
+  .burger-toggle.collapsed {
+    margin-left: 0;
+  }
+}

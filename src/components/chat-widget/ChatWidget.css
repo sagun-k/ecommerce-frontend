@@ -1,0 +1,28 @@
+.chat-widget .card {
+  border-radius: 12px;
+}
+
+.chat-widget .btn {
+  font-size: 0.875rem;
+}
+
+.chat-widget input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+
+.chat-bubble {
+  max-width: 75%;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+#chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+#chat-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}

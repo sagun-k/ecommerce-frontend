@@ -1,0 +1,227 @@
+
+/* Custom global CSS */
+.hover-shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom Pinkish Gradient for Navbar */
+.navbar-pink-gradient {
+  background: linear-gradient(to right, #ffc0cb, #ff69b4); /* Light Pink to Hot Pink */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.navbar-pink-gradient .navbar-brand,
+.navbar-pink-gradient .nav-link,
+.navbar-pink-gradient .dropdown-toggle {
+  color: white !important; /* Force white text */
+  font-weight: 500;
+}
+
+.navbar-pink-gradient .nav-link:hover,
+.navbar-pink-gradient .dropdown-toggle:hover {
+  color: rgba(255, 255, 255, 0.8) !important; /* Slightly transparent white on hover */
+}
+
+.navbar-pink-gradient .btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.navbar-pink-gradient .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar-pink-gradient .btn-light {
+  background-color: white;
+  color: #ff69b4; /* Hot Pink text on white button */
+}
+
+.navbar-pink-gradient .btn-light:hover {
+  background-color: #f0f0f0;
+  color: #ff69b4;
+}
+
+.navbar-blue-gradient {
+  background: linear-gradient(to right, #6ec1e4, #007acc); /* Light Blue to Medium Blue */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.navbar-blue-gradient .navbar-brand,
+.navbar-blue-gradient .nav-link,
+.navbar-blue-gradient .dropdown-toggle {
+  color: white !important; /* Force white text */
+  font-weight: 500;
+}
+
+.navbar-blue-gradient .nav-link:hover,
+.navbar-blue-gradient .dropdown-toggle:hover {
+  color: rgba(255, 255, 255, 0.8) !important; /* Slightly transparent white on hover */
+}
+
+.navbar-blue-gradient .btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.navbar-blue-gradient .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar-blue-gradient .btn-light {
+  background-color: white;
+  color: #007acc; /* Medium Blue text on white button */
+}
+
+.navbar-blue-gradient .btn-light:hover {
+  background-color: #f0f0f0;
+  color: #007acc;
+}
+
+
+/* Product Card Pinkish Effect */
+.product-card-pink-effect {
+  border-color: #ffc0cb; /* Light pink border */
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.3); /* Subtle pink shadow */
+}
+
+.product-card-pink-effect:hover {
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.6); /* More prominent pink shadow on hover */
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
