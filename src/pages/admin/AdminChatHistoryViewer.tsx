@@ -21,7 +21,6 @@ const AdminChatHistoryViewer = ({
     queryFn: () => ChatService.getChatHistory(selectedUser._id),
   });
 
-  // Auto-scroll to bottom when chats load or selected user changes
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -29,13 +28,11 @@ const AdminChatHistoryViewer = ({
     }
   }, [chats, selectedUser]);
 
-  // Scroll handler to detect if user scrolled up
   const onScroll = () => {
     if (!scrollRef.current) return;
 
     const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
 
-    // If scrolled more than 100px above bottom, show button
     if (scrollHeight - scrollTop - clientHeight > 100) {
       setShowScrollDown(true);
     } else {
@@ -43,7 +40,6 @@ const AdminChatHistoryViewer = ({
     }
   };
 
-  // Scroll to bottom function
   const scrollToBottom = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;

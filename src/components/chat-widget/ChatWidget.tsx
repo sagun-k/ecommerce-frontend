@@ -11,6 +11,8 @@ const ChatWidget = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isTyping, setIsTyping] = useState(false);
+  const [showCallButton, setShowCallButton] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0);
 
   const [predefinedQuestions, setPredefinedQuestions] = useState([
     "What is your return policy?",
@@ -76,6 +78,15 @@ const ChatWidget = () => {
         setMessages(updatedHistory);
         setIsTyping(false);
         scrollToBottom();
+
+        const lastMsg = updatedHistory[updatedHistory.length - 1];
+        if (
+          lastMsg.role === "bot" &&
+          /customer support/i.test(lastMsg.content)
+        ) {
+          setShowCallButton(true);
+          setTimeLeft(120);
+        }
       }, 1000);
     } catch (err) {
       setIsTyping(false);
@@ -100,6 +111,21 @@ const ChatWidget = () => {
       setMessages([]); // reset if anonymous
     }
   }, [isOpen, user]);
+
+  useEffect(() => {
+    if (!showCallButton) return;
+
+    if (timeLeft <= 0) {
+      setShowCallButton(false);
+      return;
+    }
+
+    const timerId = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timerId);
+  }, [showCallButton, timeLeft]);
 
   return (
     <div
@@ -178,6 +204,26 @@ const ChatWidget = () => {
           </Card.Body>
 
           <Card.Footer className="p-2 bg-white">
+            {showCallButton && (
+              <div className="text-center my-2">
+                <Button
+                  variant="outline-success"
+                  size="sm"
+                  onClick={() => window.open("tel:+18001234567")}
+                >
+                  <i
+                    className="fa fa-phone"
+                    style={{ color: "green", marginRight: "6px" }}
+                  ></i>
+                  Call Support{" "}
+                  {timeLeft > 0 &&
+                    `(${Math.floor(timeLeft / 60)}:${String(
+                      timeLeft % 60
+                    ).padStart(2, "0")})`}
+                </Button>
+              </div>
+            )}
+
             <Form onSubmit={handleSubmit}>
               <InputGroup>
                 {!user && (
